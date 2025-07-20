@@ -6,6 +6,7 @@ const Header=(props)=>{
         <h1>class : {props.cls}   </h1>
         <h1>total fees : {props.fs}   </h1>
         <h1>roll number : {props.no}   </h1>
+        <h1>subject : {props.sub}   </h1>
        
         </>
     )
