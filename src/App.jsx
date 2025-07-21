@@ -1,14 +1,24 @@
-
-import Header from "./Header";
-const name ="ritu bisen"
-const sclass ="Bca"
-const rollno="556"
-const totalfee="55000"
-const subject="react"
+import { BrowserRouter , Routes , Route } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
+import Contact from "./Contact";
+import Layout from "./Layout";
 const App=()=>{
     return(
         <>
-      <Header  nm={name} cls={sclass}  fs={totalfee} no={rollno} sub={subject}/>
+     <BrowserRouter>
+
+<Routes>
+
+  <Route Path="/" element={<Layout/>}>
+  
+  <Route index element={<Home/>} />
+  <Route path="home" element={<Home/>} />
+  <Route path="contact" element={<Contact/>} />
+  <Route path="about" element={<About/>} />
+  </Route>
+</Routes>
+     </BrowserRouter>
      
         </>
         
