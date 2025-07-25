@@ -1,20 +1,18 @@
 
+import{useState} from "react";
+
 const App=()=>{
-
+const[color , setColor]=useState("red");
   
-  const getval=(e)=>{
-  
-   let name=e.target.name;
-   let myvel=e.target.value;
-   console.log({[name]: value})
-  }
-
     return(
         <>
 
-<h1>welcome to my page</h1>
-enter name : <input type="text" />
-
+<h1 style={{color:color}}>my favriote color is : </h1>
+<button onClick={()=>{setColor("green")}}>green</button>
+<button onClick={()=>{setColor("brown")}}>brown</button>
+<button onClick={()=>{setColor("yellow")}}>yellow</button>
+<button onClick={()=>{setColor("blue")}}>blue</button>
+<button onClick={()=>{setColor("pink")}}>pink</button>
 
         </>
         
