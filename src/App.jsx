@@ -1,18 +1,21 @@
 
-import{useState} from "react";
+import{useState , useEffect} from "react";
 
 const App=()=>{
-const[color , setColor]=useState("red");
-  
+const[count ,setCount]= useState (0);
+const[multi ,setMulti]= useState (0);
+
+  useEffect(()=>{
+    setMulti(count*2)
+  },[count])
+
     return(
         <>
 
-<h1 style={{color:color}}>my favriote color is : </h1>
-<button onClick={()=>{setColor("green")}}>green</button>
-<button onClick={()=>{setColor("brown")}}>brown</button>
-<button onClick={()=>{setColor("yellow")}}>yellow</button>
-<button onClick={()=>{setColor("blue")}}>blue</button>
-<button onClick={()=>{setColor("pink")}}>pink</button>
+<h1>my count is:{count}</h1>
+<h1>multiplication:{multi}</h1>
+
+<button onClick={()=>{setCount(count +1)}}>click here</button>
 
         </>
         
