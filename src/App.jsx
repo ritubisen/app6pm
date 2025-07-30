@@ -1,24 +1,25 @@
+import { useState } from "react";
 
-import{useState , useEffect} from "react";
+const App = () => {
+  const [Name, setName] = useState("");
+  const [City, setCity] = useState("");
 
-const App=()=>{
-const[count ,setCount]= useState (0);
-const[multi ,setMulti]= useState (0);
+  const handleSubmit = () => {
+    console.log("Form submitted");
+    console.log({ handlename: Name, handlecity: City });
 
-  useEffect(()=>{
-    setMulti(count*2)
-  },[count])
+  }
 
-    return(
-        <>
+  return (
+    <>
+      <h1>Application Form</h1>
 
-<h1>my count is:{count}</h1>
-<h1>multiplication:{multi}</h1>
-
-<button onClick={()=>{setCount(count +1)}}>click here</button>
-
-        </>
-        
-    )
+      Enter Name : <input type="text" value={Name} onChange={(e) => setName(e.target.value)} />
+      <br />
+      Enter City : <input type="text" value={City} onChange={(e) => setCity(e.target.value)} />
+      <br />
+      <button onClick={handleSubmit}>Submit</button>
+    </>
+  )
 }
-export default App; 
+export default App;
