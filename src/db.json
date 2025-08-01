@@ -1,0 +1,11 @@
+{
+    "students":{
+        "id":1,
+        "name" : "ritu",
+        "city" : "bhopal",
+        "fess" : "57676",
+        "course" : "bca",
+        "rollno" : 8738473
+
+    }
+}
