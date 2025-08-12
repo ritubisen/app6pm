@@ -36,13 +36,13 @@ const Search=()=>{
         <hr />
 
 
-        <table width="600" border="1">
+        <table width="600" border="1" >
 <tr>
     <th>rollno</th>
     <th>name</th>
     <th>city</th>
     <th>subject</th>
-    <th>saalry</th>
+    <th>salary</th>
 </tr>
 {ans}
         </table>
