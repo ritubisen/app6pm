@@ -1,18 +1,21 @@
-
-
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "./CounterSlice";
+import { colorChange } from "./ColorSlice";
 
 const App = () => {
-  const mycount = useSelector((state) => state.mycounter.count);
+  const bgcolor = useSelector((state) => state.mycolor.color);
   const dispatch = useDispatch();
 
   return (
     <>
-      <h1>Welcome to My App</h1>
-      <button onClick={() => dispatch(increment())}>Increment</button>
-      <h1>Count : {mycount}</h1>
-      <button onClick={() => dispatch(decrement())}>Decrement</button>
+      <h1>Welcome!</h1>
+      <button onClick={() => dispatch(colorChange())}>Click here!</button>
+      <div
+        style={{
+          width: "500px",
+          height: "200px",
+          backgroundColor: bgcolor,
+        }}
+      ></div>
     </>
   );
 };
